@@ -26,6 +26,7 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Alamofire
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -48,6 +49,7 @@ class DetailViewController: UIViewController {
     commonInit()
     
     listTableView.dataSource = self
+		fetchList()
   }
   
   private func commonInit() {
@@ -77,6 +79,46 @@ extension DetailViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+		cell.textLabel?.text = listData[indexPath.row].titleLabelText
     return cell
   }
+}
+
+// MARK: - Alamofire
+extension DetailViewController {
+	
+	func fetchList() {
+		guard let data = data else { return }
+		
+		switch data {
+			case is Film:
+				fetch(list: data.listItems, of: Starship.self)
+			case is Starship:
+				fetch(list: data.listItems, of: Film.self)
+			default:
+				print("Unknown type: ", String(describing: type(of: data)))
+		}
+	}
+	
+	private func fetch<T: Decodable & Displayable>(list: [String], of: T.Type) {
+		var items: [T] = []
+		let fetchGroup = DispatchGroup()
+		
+		list.forEach { url in
+			fetchGroup.enter()
+			
+			AF.request(url).validate().responseDecodable(of: T.self) { response in
+				if let value = response.value {
+					items.append(value)
+				}
+				
+				fetchGroup.leave()
+			}
+		}
+		
+		fetchGroup.notify(queue: .main) {
+			self.listData = items
+			self.listTableView.reloadData()
+		}
+	}
 }

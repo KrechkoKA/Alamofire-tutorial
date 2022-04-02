@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		183D953D23DF5A4700845F5F /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D953C23DF5A4700845F5F /* Displayable.swift */; };
+		46CDE3D827F8A46200DA0346 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDE3D727F8A46100DA0346 /* Film.swift */; };
+		46CDE3DA27F8A5D700DA0346 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDE3D927F8A5D700DA0346 /* Films.swift */; };
+		46CDE3DC27F8AC6300DA0346 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDE3DB27F8AC6300DA0346 /* Starship.swift */; };
+		46CDE3DE27F8B5EE00DA0346 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDE3DD27F8B5EE00DA0346 /* Starships.swift */; };
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
 		6B2A81D738A340AD12B54972 /* Pods_StarWarsOpedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4884293E01387DDB245CC1FF /* Pods_StarWarsOpedia.framework */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		183D953C23DF5A4700845F5F /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		3C3575AC179B46F2E2D990C6 /* Pods-StarWarsOpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsOpedia.release.xcconfig"; path = "Target Support Files/Pods-StarWarsOpedia/Pods-StarWarsOpedia.release.xcconfig"; sourceTree = "<group>"; };
+		46CDE3D727F8A46100DA0346 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		46CDE3D927F8A5D700DA0346 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		46CDE3DB27F8AC6300DA0346 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		46CDE3DD27F8B5EE00DA0346 /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
 		4884293E01387DDB245CC1FF /* Pods_StarWarsOpedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsOpedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE9F74ECC6ADA9E64E221425 /* Pods-StarWarsOpedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsOpedia.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsOpedia/Pods-StarWarsOpedia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				183D953C23DF5A4700845F5F /* Displayable.swift */,
+				46CDE3D727F8A46100DA0346 /* Film.swift */,
+				46CDE3D927F8A5D700DA0346 /* Films.swift */,
+				46CDE3DB27F8AC6300DA0346 /* Starship.swift */,
+				46CDE3DD27F8B5EE00DA0346 /* Starships.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -141,7 +153,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					D2A5F1FF1F4A9144005CD714 = {
@@ -228,6 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46CDE3D827F8A46200DA0346 /* Film.swift in Sources */,
+				46CDE3DC27F8AC6300DA0346 /* Starship.swift in Sources */,
+				46CDE3DA27F8A5D700DA0346 /* Films.swift in Sources */,
+				46CDE3DE27F8B5EE00DA0346 /* Starships.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 				E087AADA23620E3B00D1E33E /* MainTableViewController.swift in Sources */,
 				183D953D23DF5A4700845F5F /* Displayable.swift in Sources */,
@@ -282,6 +298,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -341,6 +358,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
